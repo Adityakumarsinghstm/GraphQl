@@ -1,0 +1,15 @@
+type User{
+      userId:ID!,
+      name:String,
+      email:String,
+      phone:String,
+      password:String,
+      orders:[Order]
+}
+type Order{
+      orderId:ID!,
+      orderDetails:String,
+      address:String,
+      price:Int,
+      user:User
+}
