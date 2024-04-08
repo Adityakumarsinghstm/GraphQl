@@ -13,3 +13,17 @@ type Order{
       price:Int,
       user:User
 }
+type Query{
+     getUsers:[User],
+     getUser(userId:ID!):User,
+     getOrders:[Order],
+     getOrder(orderId:ID!):Order
+}
+type Mutation{
+     createUser(email:String,name:String,password:String,phone:String):User,
+     deleteUser(userId:ID!):Boolean,
+
+     createOrder(orderDetails:String,address:String,price:Int,userId:Int!):Order,
+     deleteOrder(orderId:ID!):Boolean
+
+}
